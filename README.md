@@ -22,9 +22,10 @@ Tenor takes a data-centric approach to deliver relevant GIF searches in over 45 
 Add Dependency to Flutter
 ```yaml
 dependencies:
-  git:
-    url: https://github.com/hudle/FlutterTenorApiService
-    ref: main
+  tenor_api_service:
+    git:
+      url: https://github.com/hudle/FlutterTenorApiService
+      ref: main
 ```
 
 ## Usage
