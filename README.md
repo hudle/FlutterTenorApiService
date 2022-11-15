@@ -11,29 +11,37 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Tenor Api Service Using Dio (v2 version). 
 
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Tenor takes a data-centric approach to deliver relevant GIF searches in over 45 languages worldwide. Integrate Tenor GIF search into your application in a matter of minutes.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+[Click here](https://developers.google.com/tenor/guides/quickstart) to generated API KEY
+
+Add Dependency to Flutter
+```yaml
+dependencies:
+  git:
+    url: https://github.com/hudle/FlutterTenorApiService
+    ref: main
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+[See Docs:](https://developers.google.com/tenor/guides/endpoints)
 
+Create ApiService 
 ```dart
-const like = 'sample';
+const TenorApiService service = TenorApiProvider();
 ```
+### Search
+e.g.
+```dart
+TenorDataResponse response = await service.search(TenorSearchRequest(key: key, query: 'meme', limit: 2, mediaFilter: 'gif, tinygif', locale: 'en', clientKey: 'my_app', searchFilter: 'static',));
+```
+
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+See Gif Picker also [Click here](https://github.com/hudle/FlutterTenorApiService)
