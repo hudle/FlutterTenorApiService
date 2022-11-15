@@ -41,6 +41,24 @@ e.g.
 TenorDataResponse response = await service.search(TenorSearchRequest(key: key, query: 'meme', limit: 2, mediaFilter: 'gif, tinygif', locale: 'en', clientKey: 'my_app', searchFilter: 'static',));
 ```
 
+### Available Apis
+
+```dart
+Future<TenorDataResponse> search(TenorSearchRequest tenorRequest);
+
+Future<TenorCategoryResponse> categories(TenorCategoryRequest categoryRequest);
+
+Future<SuggestionsResponse> searchSuggestion(TenorSearchSuggestionRequest suggestionRequest);
+
+Future<SuggestionsResponse> autoComplete(TenorAutoCompleteRequest autoCompleteRequest);
+
+Future<TenorDataResponse> featured(TenorFeaturedRequest featuredRequest);
+
+Future<SuggestionsResponse> trendingTerms(TenorTrendingTermsRequest trendingTermsRequest);
+
+Future<void> registerShare(RegisterShareRequest registerShareRequest);
+```
+
 
 ## Additional information
 
