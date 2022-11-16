@@ -63,4 +63,4 @@ Future<void> registerShare(RegisterShareRequest registerShareRequest);
 
 ## Additional information
 
-See Gif Picker also [Click here](https://github.com/hudle/FlutterTenorApiService)
+See Gif Picker also [Click here](https://github.com/hudle/FlutterTenorGifPicker)

@@ -12,14 +12,14 @@ import 'package:tenor_api_service/src/network/tenor_api_provider.dart';
 
 void main() {
   late TenorApiService apiService;
-  const key = 'YOUR_API_KEY';
+  const key = 'AIzaSyDRXyttY5JX2_tS8ewP8yALV_u6eYr3nHU';
 
   setUp(() {
     apiService = TenorApiProvider();
   });
   
   test('Search Api', () async {
-    final response = await apiService.search(TenorSearchRequest(key: key, query: 'mai nahi', limit: 2));
+    final response = await apiService.search(TenorSearchRequest(key: key, query: 'sports', limit: 3, country: 'IN',));
     expect(true, response.results.isNotEmpty);
   });
 
@@ -39,7 +39,7 @@ void main() {
   });
 
   test('Trending Terms Api', () async {
-    final response = await apiService.trendingTerms(TenorTrendingTermsRequest(key: key, limit: 2,));
+    final response = await apiService.trendingTerms(TenorTrendingTermsRequest(key: key, limit: 10,));
     expect(true, response.results.isNotEmpty);
   });
 
