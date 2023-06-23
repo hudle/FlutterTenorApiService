@@ -12,7 +12,7 @@ import 'package:tenor_api_service/src/network/tenor_api_provider.dart';
 
 void main() {
   late TenorApiService apiService;
-  const key = 'AIzaSyDRXyttY5JX2_tS8ewP8yALV_u6eYr3nHU';
+  const key = 'YOUR_TENOR_API_KEY';
 
   setUp(() {
     apiService = TenorApiProvider();
@@ -49,7 +49,7 @@ void main() {
   });
 
   test('Register Share Api', () async {
-    final response = await apiService.registerShare(RegisterShareRequest(key: key, id: '17420918566131897991'));
+    await apiService.registerShare(RegisterShareRequest(key: key, id: '17420918566131897991'));
     expect(true, true);
   });
 }

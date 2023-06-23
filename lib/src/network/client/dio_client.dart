@@ -34,9 +34,7 @@ extension DioResponse on Future<Response<dynamic>> {
       } else {
         return Future.error(response.data ?? 'Something went wrong');
       }
-    } catch (e, s) {
-      print(e);
-      print(s);
+    } catch (e) {
       return Future.error(e);
     }
   }
